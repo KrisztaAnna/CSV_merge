@@ -8,6 +8,13 @@ def get_files(directory):
             print(entry.path)
 
 
+def get_file_content(filename):
+    with open(filename) as file:
+        data = file.readlines()
+        del data[0]
+        return data
+
+
 def main():
     get_files(argv[1])
 
